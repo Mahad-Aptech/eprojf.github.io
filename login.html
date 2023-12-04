@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GG-Welcome</title>
+    <link rel="icon" type="image/png" href="/3Artboard 1.png" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      @font-face {
+        font-family: Head;
+        src: url(Glitch\ inside.otf);
+      }
+      @font-face {
+        font-family: body;
+        src: url(klavika-medium.otf);
+      }
+      @font-face {
+        font-family: body3;
+        src: url(Modern\ Age.ttf);
+      }
+      @font-face {
+        font-family: Nav;
+        src: url(Dragrace.ttf);
+      }
+      @font-face {
+        font-family: header2;
+        src: url(OriginTech.otf);
+      }
+      @keyframes top {
+        0% {
+          transform: translateY(-1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes bottom {
+        0% {
+          transform: translateY(1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes texthead {
+        0% {
+          letter-spacing: 0.5em;
+          opacity: 0;
+        }
+        40% {
+          opacity: 0.6;
+        }
+        100% {
+          letter-spacing: normal;
+          opacity: 1;
+        }
+      }
+      @keyframes para {
+        0% {
+          filter: blur(2rem);
+          opacity: 0;
+        }
+        100% {
+          filter: blur(0px);
+          opacity: 1;
+        }
+      }
+      @keyframes textspread {
+        0% {
+          letter-spacing: -0.5em;
+          opacity: 0;
+        }
+        40% {
+          opacity: 0.6;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      body {
+        background: url(BG2epic.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .shopnow {
+        border: none;
+        height: 1.75em;
+        width: 7em;
+        border-radius: 5em;
+        background-color: #f2f2f2;
+        color: #e41515;
+        font-size: 2.4rem;
+        font-family: header2;
+        margin-left: 0.7em;
+        transition: all 0.5s;
+        margin-top: 1em;
+        animation: bottom 2s ease-in-out both;
+      }
+      .shopnow:hover {
+        cursor: pointer;
+        background-color: #e41515;
+        color: white;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #222;
+        padding: 0.5rem 1rem;
+        margin: 0em;
+        height: 4em;
+        animation: top 1s ease-out both;
+      }
+
+      .logo {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        padding: 0;
+      }
+
+      .nav-links li a {
+        color: #f2f2f2;
+        text-decoration: none;
+        padding: 0.5rem 1.75rem;
+        font-family: body;
+        font-size: 2rem;
+      }
+
+      .nav-links li a:hover {
+        color: #f2f2f2;
+        background-color: #ff0000;
+        border-radius: 0.2em;
+      }
+
+      .login {
+        background-color: #ff0000;
+        color: #fff;
+        border: none;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        border-radius: 25em;
+        font-family: body3;
+        font-size: 1.25rem;
+      }
+
+      .login:hover {
+        background-color: #cc0000;
+      }
+      .card {
+        width: 46rem;
+        height: 28rem;
+        background-color: #f2f2f2ea;
+        margin-top: 9rem;
+        margin-left: 35rem;
+        padding: 2rem;
+        border-radius: 0rem 3rem 0rem 3rem;
+        animation: bottom 2s ease-in-out;
+      }
+      .card > h2 {
+        font-family: body;
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        animation: textspread 1s ease-in-out;
+        animation-delay: 1s;
+      }
+      form > label {
+        font-family: body;
+        font-size: 1.5rem;
+      }
+      form > input {
+        font-family: body;
+        height: 2rem;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      #btx2 {
+        background-color: #e41515;
+        border: none;
+        color: white;
+        height: 3rem;
+        font-size: 1rem;
+        border-radius: 0rem 1rem 0rem 1rem;
+      }
+      #btx3 {
+        background-color: #e41515;
+        border: none;
+        color: white;
+        height: 3rem;
+        font-size: 1rem;
+        border-radius: 0rem 1rem 0rem 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/3Artboard 1.png" class="logo"
+        ><img src="3Artboard 1.png" alt="logo"
+      /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products1.html">Products</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <a href="newacc.html"><button class="login">SIGN UP</button></a>
+    </nav>
+    <div class="card">
+      <h2>WELCOME BACK</h2>
+      <form>
+        <label for="user">Username</label><br />
+        <input type="text" required /><br />
+        <label for="pass">Password</label><br />
+        <input type="password" required /><br />
+        <label for="pass">Re-Type Password</label><br />
+        <input type="password" required /><br />
+        <input type="submit" value="login" id="btx2" />
+        <input type="reset" value="clear" id="btx3" />
+      </form>
+    </div>
+  </body>
+</html>

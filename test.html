@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GAME GEAR</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #222;
+        padding: 0.5rem 1rem;
+        margin: 0em;
+        height: 4em;
+      }
+
+      .logo {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        padding: 0;
+      }
+
+      .nav-links li a {
+        color: #f2f2f2;
+        text-decoration: none;
+        padding: 0.5rem 1.75rem;
+        font-family: body;
+        font-size: 2rem;
+      }
+
+      .nav-links li a:hover {
+        color: #f2f2f2;
+        background-color: rgb(190, 70, 70);
+        border-radius: 0.2em;
+      }
+
+      .login {
+        background-color: #ff0000;
+        color: #fff;
+        border: none;
+        padding: 0.75rem 2rem;
+        cursor: pointer;
+        border-radius: 25em;
+        font-family: body3;
+        font-size: 1.25rem;
+      }
+
+      .login:hover {
+        background-color: #cc0000;
+      }
+
+      @media screen and (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .nav-links {
+          flex-direction: column;
+          width: 100%;
+          margin-top: 1rem;
+        }
+
+        .nav-links li a {
+          padding: 0.5rem 1rem;
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/" class="logo"><img src="3Artboard 1.png" alt="logo" /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+      <button class="login">Login</button>
+    </nav>
+    <h2>GAME GEAR</h2>
+    <p>
+      Welcome to Pakistan's premire e-store<br />
+      for all your gaming needs at the market<br />
+      slashing price
+    </p>
+    <button class="shopnow">EXPLORE!</button>
+  </body>
+</html>

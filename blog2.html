@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GG-Products</title>
+    <link rel="icon" type="image/png" href="/3Artboard 1.png" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      @font-face {
+        font-family: Head;
+        src: url(Glitch\ inside.otf);
+      }
+      @font-face {
+        font-family: body;
+        src: url(klavika-medium.otf);
+      }
+      @font-face {
+        font-family: body3;
+        src: url(Modern\ Age.ttf);
+      }
+      @font-face {
+        font-family: Nav;
+        src: url(Dragrace.ttf);
+      }
+      @font-face {
+        font-family: blight;
+        src: url(klavika-light.otf);
+      }
+      @keyframes top {
+        0% {
+          transform: translateY(-1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes left {
+        0% {
+          transform: translateX(-1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes bottom {
+        0% {
+          transform: translateY(1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes right {
+        0% {
+          transform: translateX(1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #222;
+        padding: 0.5rem 1rem;
+        margin: 0em;
+        height: 4em;
+        /* animation: top 1s ease-out both; */
+      }
+
+      .logo {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        padding: 0;
+      }
+
+      .nav-links li a {
+        color: #f2f2f2;
+        text-decoration: none;
+        padding: 0.5rem 1.75rem;
+        font-family: body;
+        font-size: 2rem;
+      }
+
+      .nav-links li a:hover {
+        color: #f2f2f2;
+        background-color: #ff0000;
+        border-radius: 0.2em;
+      }
+
+      .login {
+        background-color: #ff0000;
+        color: #fff;
+        border: none;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        border-radius: 25em;
+        font-family: body3;
+        font-size: 1.25rem;
+      }
+
+      .login:hover {
+        background-color: #cc0000;
+      }
+      .sidebar {
+        background-color: #0a0a0a;
+        width: 18rem;
+        height: 49.7rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        /* animation: left 1.5s ease-in-out both; */
+      }
+      .section1 {
+        height: 20rem;
+        width: 100%;
+        background-color: #f2f2f2;
+        border-radius: 0rem 2rem 0rem 2rem;
+      }
+      .section1 > h2 {
+        text-align: center;
+        margin-top: 2.5rem;
+        font-family: body;
+      }
+      .section1 > input {
+        height: 2rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
+        width: 13.6rem;
+      }
+      .section1 > #red {
+        background-color: #ff0000;
+        border: none;
+        color: white;
+        font-family: blight;
+        font-weight: 400;
+        font-size: 1.1rem;
+      }
+      .section2 {
+        margin-top: 2rem;
+        height: 24rem;
+        width: 100%;
+        background-color: #f2f2f2;
+        border-radius: 0rem 2rem 0rem 2rem;
+      }
+      .section2 > input {
+        height: 2rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
+        width: 13.6rem;
+      }
+      /* .productpage {
+        height: 42.2rem;
+        width: 71rem;
+        background-color: #e2e2e2;
+        position: absolute;
+        top: 6.5rem;
+        left: 22.7rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: 0rem 2rem 0rem 2rem;
+        padding: 2rem;
+        animation: bottom 2s ease-in-out both;
+      }
+      .sidead {
+        height: 46.2rem;
+        width: 18.5rem;
+        background-color: rgba(126, 123, 123, 0);
+        position: absolute;
+        z-index: 1;
+        top: 6.5rem;
+        left: 99.2rem;
+        /* animation: right 2s ease-in-out both; */
+      .sidead > img {
+        max-width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 0rem 2rem 0rem 2rem;
+      }
+      .product {
+        height: 20rem;
+        width: 16.6rem;
+        background-color: #fff;
+        margin-right: 1rem;
+        margin-bottom: 0.8rem;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+        animation: bottom 2s ease-in-out both;
+      }
+      #left {
+        margin-left: 0.5rem;
+      }
+      .product:hover {
+        cursor: pointer;
+        transform: translateY(-8px);
+        box-shadow: 0px 0px 5px #5e5d5d;
+      }
+      .product > p {
+        font-size: 1.2rem;
+        font-family: body;
+        margin-left: 2rem;
+      }
+      .product > div > img {
+        height: auto;
+        width: 100%;
+      }
+      .section2 > h2 {
+        text-align: center;
+        margin-top: 2.5rem;
+        font-family: body;
+      }
+      .section2 > #src {
+        height: 2rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
+        width: 13.6rem;
+      }
+      .section2 > ul {
+        margin-top: 1rem;
+        margin-left: 2rem;
+        list-style: none;
+      }
+      .section2 > ul > li {
+        font-family: blight;
+        font-size: 1.2rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+      }
+      #red {
+        background-color: #ff0000;
+        border: none;
+        color: white;
+        font-family: blight;
+        font-weight: 400;
+        font-size: 1.1rem;
+        height: 2rem;
+        margin-top: 0.5rem;
+        margin-left: 2rem;
+        width: 13.6rem;
+      }
+      #red:hover {
+        cursor: pointer;
+      }
+      #tall {
+        height: 5rem;
+      }
+      #bgtxt {
+        margin-left: 2rem;
+        margin-top: 0.9rem;
+        font-family: body;
+      }
+      /* #Range {
+        height: 2rem;
+        margin-top: 1rem;
+        width: 5rem;
+      }
+      .section2 > label {
+        margin-left: 2rem;
+        font-family: body;
+      }
+      .pagination {
+        position: absolute;
+        z-index: 3;
+        top: 50.7rem;
+        left: 50rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.75rem;
+        background-color: #333;
+        border-radius: 1rem;
+        font-family: body;
+        animation: bottom 2.5s ease-in-out both;
+      }
+
+      .pagination a {
+        padding: 8px 16px;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .pagination a:hover {
+        background-color: #ff0000;
+      }
+      .pagination a:active {
+        background-color: #ff0000;
+      }
+      .pagination a::before {
+        background-color: #ff0000;
+      }
+      .pager {
+        background-color: #ff0000;
+      } */
+      .main-page {
+        height: 38.2rem;
+        width: 87rem;
+        background-color: #5e5d5d;
+        position: absolute;
+        left: 22.5rem;
+        top: 6.5rem;
+        padding: 4rem 4rem 4rem 4rem;
+        border-radius: 0rem 2rem 0rem 2rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      .main-page > input {
+        height: 2rem;
+        border-radius: 1rem;
+        border: none;
+      }
+      .main-page > input::placeholder {
+        text-align: center;
+        font-family: body;
+        font-size: 1.2rem;
+      }
+      .bg2 {
+        background-color: #f2f2f2;
+        height: 90%;
+        width: 95.5%;
+        border-radius: 0rem 2rem 0rem 2rem;
+        padding: 2rem;
+      }
+      .bg2 > h2 {
+        font-family: body;
+        font-size: 1.9rem;
+      }
+      .id {
+        background-color: #ff0000;
+        height: 1.5rem;
+        width: 15rem;
+        padding: 0.5rem;
+        border-radius: 0rem 0.5rem 0rem 0.5rem;
+        color: white;
+        font-family: blight;
+        margin-top: 0.5rem;
+      }
+      .bogp {
+        background-color: #fff;
+        border: #5e5d5d solid 0.1px;
+        border-radius: 0rem 0rem 0rem 2rem;
+        height: 23.5rem;
+        width: 50rem;
+        margin-top: 0.5rem;
+        display: inline-block;
+        font-family: blight;
+        padding: 1rem;
+        overflow: auto;
+      }
+      ::-webkit-scrollbar {
+        width: 20px;
+        border: none;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: black;
+        border: none;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: red;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        border: none;
+      }
+      .img {
+        display: inline;
+        width: 50rem;
+      }
+      .img > img {
+        width: 25.6rem;
+        margin-left: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="3Artboard 1.png" class="logo"
+        ><img src="3Artboard 1.png" alt="logo"
+      /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products1.html">Products</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <a href="login.html"><button class="login">Login</button></a>
+    </nav>
+    <div class="sidebar">
+      <div class="section1">
+        <h2>SIGN IN</h2>
+        <input type="text" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <a href="login.html"><input type="button" value="login" id="red" /></a>
+        <a href="newacc.html"
+          ><input type="button" value="create a new account" id="red"
+        /></a>
+      </div>
+      <div class="section2">
+        <h2>Blogs</h2>
+        <input type="text" placeholder="reason" />
+        <input type="button" value="Report Blog" id="red" />
+        <p id="bgtxt">Reply</p>
+        <input type="text" placeholder="" id="tall" />
+        <input type="button" value="Send comment" id="red" />
+      </div>
+    </div>
+    <div class="main-page">
+      <div class="bg2">
+        <h2>FASTEST KEYBOARD</h2>
+        <div class="id"><b>@Asghar 12:22pm 3/10/2023</b></div>
+        <div class="id"><h4>Bloody B975</h4></div>
+        <div class="bogp">
+          <p>
+            Are you ready to revolutionize your typing and gaming experience?
+            Look no further than the Bloody B930 keyboard. This innovative
+            keyboard is engineered to deliver lightning-fast response times,
+            tactile precision, and ergonomic elegance, making it a game-changer
+            for anyone seeking the ultimate keyboard upgrade.
+            <br /><br /><b>Libra Light Strike Keys</b><br />
+            The Bloody B930 introduces a new era of keyboard technology with its
+            Libra Light Strike keys. These optical mechanical switches combine
+            the tactile feel of traditional mechanical keys with an incredible
+            response time of just 0.2 seconds. It's like upgrading from a 60Hz
+            to a 144Hz monitor - the difference is simply mind-blowing.
+            <br /><br /><b>Performance and Precision</b><br />
+            Whether you're a dedicated typist or a hardcore gamer, the Bloody
+            B930's unparalleled speed and precision will elevate your
+            performance to new heights. Every keystroke is met with
+            instantaneous feedback, allowing you to type with unmatched accuracy
+            and game with lightning-fast reflexes. Say goodbye to input lag and
+            hello to a world of seamless responsiveness.
+            <br /><br /><b>Ergonomic 10-Keyless Form Factor</b><br />
+            The keyboard's compact and ergonomic 10-keyless design is a
+            game-changer for users who value both performance and comfort. The
+            smaller form factor maximizes desk space and promotes a more natural
+            hand position, ensuring that you can type and game for hours on end
+            without any discomfort. It's the perfect fusion of functionality and
+            ergonomics.
+            <br /><br /><b>Aesthetics and Durability</b><br />
+            Not only does the Bloody B930 excel in performance, but it also
+            dazzles with its sleek and modern design. The keyboard's aesthetic
+            appeal is complemented by its robust construction, ensuring that it
+            can withstand the demands of intense gaming and daily use. It's a
+            marriage of style and durability that's sure to turn heads.
+            <br /><br /><b>Verdict</b><br />
+            In conclusion, the Bloody B930 keyboard is a force to be reckoned
+            with. With its groundbreaking Libra Light Strike keys,
+            lightning-fast response time, ergonomic form factor, and striking
+            design, it's a game-changer in the world of keyboards. Whether
+            you're a competitive gamer, a passionate typist, or someone who
+            simply appreciates cutting-edge technology, the Bloody B930 is a
+            must-have addition to your setup. So, why settle for ordinary when
+            you can embrace extraordinary? Unleash your speed and precision with
+            the Bloody B930 keyboard and experience a whole new dimension of
+            typing and gaming excellence.
+          </p>
+        </div>
+        <div class="img">
+          <img src="B930.jpg" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

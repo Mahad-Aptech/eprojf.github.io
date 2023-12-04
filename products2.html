@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GG-Products</title>
+    <link rel="icon" type="image/png" href="/3Artboard 1.png" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      @font-face {
+        font-family: Head;
+        src: url(Glitch\ inside.otf);
+      }
+      @font-face {
+        font-family: body;
+        src: url(klavika-medium.otf);
+      }
+      @font-face {
+        font-family: body3;
+        src: url(Modern\ Age.ttf);
+      }
+      @font-face {
+        font-family: Nav;
+        src: url(Dragrace.ttf);
+      }
+      @font-face {
+        font-family: blight;
+        src: url(klavika-light.otf);
+      }
+      @keyframes top {
+        0% {
+          transform: translateY(-1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes left {
+        0% {
+          transform: translateX(-1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes bottom {
+        0% {
+          transform: translateY(1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes right {
+        0% {
+          transform: translateX(1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #222;
+        padding: 0.5rem 1rem;
+        margin: 0em;
+        height: 4em;
+        /* animation: top 1s ease-out both; */
+      }
+
+      .logo {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        padding: 0;
+      }
+
+      .nav-links li a {
+        color: #f2f2f2;
+        text-decoration: none;
+        padding: 0.5rem 1.75rem;
+        font-family: body;
+        font-size: 2rem;
+      }
+
+      .nav-links li a:hover {
+        color: #f2f2f2;
+        background-color: #ff0000;
+        border-radius: 0.2em;
+      }
+
+      .login {
+        background-color: #ff0000;
+        color: #fff;
+        border: none;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        border-radius: 25em;
+        font-family: body3;
+        font-size: 1.25rem;
+      }
+
+      .login:hover {
+        background-color: #cc0000;
+      }
+      .sidebar {
+        background-color: #0a0a0a;
+        width: 18rem;
+        height: 50rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        /* animation: left 1.5s ease-in-out both; */
+      }
+      .section1 {
+        height: 20rem;
+        width: 100%;
+        background-color: #f2f2f2;
+        border-radius: 0rem 2rem 0rem 2rem;
+      }
+      .section1 > h2 {
+        text-align: center;
+        margin-top: 2.5rem;
+        font-family: body;
+      }
+      .section1 > input {
+        height: 2rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
+        width: 13.6rem;
+      }
+      .section1 > #red {
+        background-color: #ff0000;
+        border: none;
+        color: white;
+        font-family: blight;
+        font-weight: 400;
+        font-size: 1.1rem;
+      }
+      .section2 {
+        margin-top: 2rem;
+        height: 24rem;
+        width: 100%;
+        background-color: #f2f2f2;
+        border-radius: 0rem 2rem 0rem 2rem;
+      }
+      .productpage {
+        height: 42.2rem;
+        width: 71rem;
+        background-color: #e2e2e2;
+        position: absolute;
+        top: 6.5rem;
+        left: 22.7rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: 0rem 2rem 0rem 2rem;
+        padding: 2rem;
+        animation: bottom 2s ease-in-out both;
+      }
+      .sidead {
+        height: 46.2rem;
+        width: 18.5rem;
+        background-color: rgba(126, 123, 123, 0);
+        position: absolute;
+        z-index: 1;
+        top: 6.5rem;
+        left: 99.2rem;
+        /* animation: right 2s ease-in-out both; */
+      }
+      .sidead > img {
+        max-width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 0rem 2rem 0rem 2rem;
+      }
+      .product {
+        height: 20rem;
+        width: 16.6rem;
+        background-color: #fff;
+        margin-right: 1rem;
+        margin-bottom: 0.8rem;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+        animation: bottom 2s ease-in-out both;
+      }
+      #left {
+        margin-left: 0.5rem;
+      }
+      .product:hover {
+        cursor: pointer;
+        transform: translateY(-8px);
+        box-shadow: 0px 0px 5px #5e5d5d;
+      }
+      .product > p {
+        font-size: 1.2rem;
+        font-family: body;
+        margin-left: 2rem;
+      }
+      .product > div > img {
+        height: auto;
+        width: 100%;
+      }
+      .section2 > h2 {
+        text-align: center;
+        margin-top: 2.5rem;
+        font-family: body;
+      }
+      .section2 > #src {
+        height: 2rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
+        width: 13.6rem;
+      }
+      .section2 > ul {
+        margin-top: 1rem;
+        margin-left: 2rem;
+        list-style: none;
+      }
+      .section2 > ul > li {
+        font-family: blight;
+        font-size: 1.2rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+      }
+      #red {
+        background-color: #ff0000;
+        border: none;
+        color: white;
+        font-family: blight;
+        font-weight: 400;
+        font-size: 1.1rem;
+        height: 2rem;
+        margin-top: 0.5rem;
+        margin-left: 2rem;
+        width: 13.6rem;
+      }
+      #red:hover {
+        cursor: pointer;
+      }
+      #Range {
+        height: 2rem;
+        margin-top: 1rem;
+        width: 5rem;
+      }
+      .section2 > label {
+        margin-left: 2rem;
+        font-family: body;
+      }
+      .pagination {
+        position: absolute;
+        z-index: 3;
+        top: 50.7rem;
+        left: 50rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.75rem;
+        background-color: #333;
+        border-radius: 1rem;
+        font-family: body;
+        animation: bottom 2.5s ease-in-out both;
+      }
+
+      .pagination a {
+        padding: 8px 16px;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .pagination a:hover {
+        background-color: #ff0000;
+      }
+      .pagination a:active {
+        background-color: #ff0000;
+      }
+      .pagination a::before {
+        background-color: #ff0000;
+      }
+      .pager {
+        background-color: #ff0000;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="3Artboard 1.png" class="logo"
+        ><img src="3Artboard 1.png" alt="logo"
+      /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products1.html">Products</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <a href="login.html"><button class="login">Login</button></a>
+    </nav>
+    <div class="sidebar">
+      <div class="section1">
+        <h2>SIGN IN</h2>
+        <input type="text" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <a href="login.html"><input type="button" value="login" id="red" /></a>
+        <a href="newacc.html"
+          ><input type="button" value="create a new account" id="red"
+        /></a>
+      </div>
+      <div class="section2">
+        <h2>FILTER</h2>
+        <input type="text" placeholder="search" id="src" />
+        <a href="productsmouse.html"><button id="red">Mouse</button></a>
+        <a href="productskey.html"><button id="red">Keyboard</button></a>
+        <a href="productshead.html"><button id="red">Headphone</button></a>
+        <a href="productsgear.html"><button id="red">Gear</button></a>
+        <label for="Range">Range</label>
+        <input type="text" id="Range" placeholder="Min" />
+        <input type="text" id="Range" placeholder="Max" />
+      </div>
+    </div>
+    <div class="productpage">
+      <a href="gpw70.html">
+        <div class="product" id="left">
+          <div class="pimg"><img src="GPW70.jpg" /></div>
+          <p>GPW70</p>
+          <p style="color: rgb(9, 139, 9)">PKR 3,000</p>
+        </div></a
+      >
+      <a href="g525.html">
+        <div class="product">
+          <div class="pimg"><img src="G525.jpg" /></div>
+          <p>G525</p>
+          <p style="color: rgb(9, 139, 9)">PKR 5,000</p>
+        </div></a
+      >
+      <a href="W60.html"
+        ><div class="product">
+          <div class="pimg"><img src="W60.jpg" /></div>
+          <p>W60</p>
+          <p style="color: rgb(9, 139, 9)">PKR 6,000</p>
+        </div>
+      </a>
+      <a href="GM50.html">
+        <div class="product">
+          <div class="pimg"><img src="GM50.jpg" /></div>
+          <p>GM50</p>
+          <p style="color: rgb(9, 139, 9)">PKR 6,000</p>
+        </div></a
+      >
+      <a href="S510.HTML">
+        <div class="product" id="left">
+          <div class="pimg"><img src="S510.jpg" /></div>
+          <p>S510</p>
+          <p style="color: rgb(9, 139, 9)">PKR 13,000</p>
+        </div></a
+      >
+      <a href="g2200s.html">
+        <div class="product">
+          <div class="pimg"><img src="G2200S.jpg" /></div>
+          <p>G2200S</p>
+          <p style="color: rgb(9, 139, 9)">PKR 12,000</p>
+        </div></a
+      >
+      <a href="j90s.html"
+        ><div class="product">
+          <div class="pimg"><img src="J90S.jpg" /></div>
+          <p>J90S</p>
+          <p style="color: rgb(9, 139, 9)">PKR 3,000</p>
+        </div>
+      </a>
+      <a href="b313-8.html">
+        <div class="product">
+          <div class="pimg"><img src="B313-8.jpg" /></div>
+          <p>B313-8</p>
+          <p style="color: rgb(9, 139, 9)">PKR 11,000</p>
+        </div></a
+      >
+    </div>
+    <div class="sidead">
+      <img src="ezgif.com-gif-maker.gif" />
+    </div>
+    <div class="pagination">
+      <a href="products1.html">←</a>
+      <a href="products1.html">1</a>
+      <a href="products2.html" class="pager">2</a>
+      <a href="products3.html">3</a>
+      <a href="products4.html">4</a>
+      <a href="products3.html">→</a>
+    </div>
+  </body>
+</html>

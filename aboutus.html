@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GG-AboutUs</title>
+    <link rel="icon" type="image/png" href="/3Artboard 1.png" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      @font-face {
+        font-family: Head;
+        src: url(Glitch\ inside.otf);
+      }
+      @font-face {
+        font-family: body;
+        src: url(klavika-medium.otf);
+      }
+      @font-face {
+        font-family: body3;
+        src: url(Modern\ Age.ttf);
+      }
+      @font-face {
+        font-family: Nav;
+        src: url(Dragrace.ttf);
+      }
+      @font-face {
+        font-family: header2;
+        src: url(OriginTech.otf);
+      }
+      @keyframes top {
+        0% {
+          transform: translateY(-1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes bottom {
+        0% {
+          transform: translateY(1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes texthead {
+        0% {
+          letter-spacing: 0.5em;
+          opacity: 0;
+        }
+        40% {
+          opacity: 0.6;
+        }
+        100% {
+          letter-spacing: normal;
+          opacity: 1;
+        }
+      }
+      @keyframes para {
+        0% {
+          filter: blur(2rem);
+          opacity: 0;
+        }
+        100% {
+          filter: blur(0px);
+          opacity: 1;
+        }
+      }
+      body {
+        background: url(BG2epic.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      h2 {
+        font-family: header2;
+        color: white;
+        font-size: 8em;
+        margin-left: 0.2em;
+        margin-top: 1.5em;
+        margin-bottom: 0em;
+        text-shadow: 3px 3px 5px rgb(63, 2, 63);
+        text-shadow: 4px 4px 5px #e41515;
+        animation: texthead 2s ease-in-out both;
+      }
+      p {
+        font-family: body;
+        color: white;
+        font-size: 1.5rem;
+        margin-left: 1em;
+        margin-top: 0em;
+        animation: para 2s ease-out both;
+      }
+      .shopnow {
+        border: none;
+        height: 1.75em;
+        width: 7em;
+        border-radius: 5em;
+        background-color: #f2f2f2;
+        color: #e41515;
+        font-size: 2.4rem;
+        font-family: header2;
+        margin-left: 0.7em;
+        transition: all 0.5s;
+        margin-top: 1em;
+        animation: bottom 2s ease-in-out both;
+      }
+      .shopnow:hover {
+        cursor: pointer;
+        background-color: #e41515;
+        color: white;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #222;
+        padding: 0.5rem 1rem;
+        margin: 0em;
+        height: 4em;
+        animation: top 1s ease-out both;
+      }
+
+      .logo {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        padding: 0;
+      }
+
+      .nav-links li a {
+        color: #f2f2f2;
+        text-decoration: none;
+        padding: 0.5rem 1.75rem;
+        font-family: body;
+        font-size: 2rem;
+      }
+
+      .nav-links li a:hover {
+        color: #f2f2f2;
+        background-color: #ff0000;
+        border-radius: 0.2em;
+      }
+
+      .login {
+        background-color: #ff0000;
+        color: #fff;
+        border: none;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        border-radius: 25em;
+        font-family: body3;
+        font-size: 1.25rem;
+      }
+
+      .login:hover {
+        background-color: #cc0000;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/3Artboard 1.png" class="logo"
+        ><img src="3Artboard 1.png" alt="logo"
+      /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products1.html">Products</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <a href="login.html"><button class="login">Login</button></a>
+    </nav>
+    <h2>ABOUT US</h2>
+    <br />
+    <p>
+      Welcome to Pakistan's premire e-store for all your gaming needs at the
+      market slashing price.
+    </p>
+    <p>
+      At GG-Home, we are passionate about gaming and understand the unique needs
+      of PC gamers.<br /><br />
+      We provide the latest gaming PCs, consoles, accessories, and games from
+      the best brands in the industry.
+    </p>
+    <p>
+      Our dedicated team of professionals has extensive knowledge and expertise
+      in gaming, allowing us to offer<br />
+      unparalleled customer service. We understand the importance of delivering
+      high-quality products and <br />services, which is why we strive to
+      provide the best gaming experience possible.
+    </p>
+    <br />
+    <p>
+      Our mission is to be the leading PC gaming store in Pakistan, providing
+      gamers with a one-stop solution for all<br />
+      their gaming needs.
+    </p>
+    <a href="products1.html"><button class="shopnow">SHOP NOW!</button></a>
+  </body>
+</html>

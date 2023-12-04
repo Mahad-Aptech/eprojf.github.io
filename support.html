@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GG-Products</title>
+    <link rel="icon" type="image/png" href="/3Artboard 1.png" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      @font-face {
+        font-family: Head;
+        src: url(Glitch\ inside.otf);
+      }
+      @font-face {
+        font-family: body;
+        src: url(klavika-medium.otf);
+      }
+      @font-face {
+        font-family: body3;
+        src: url(Modern\ Age.ttf);
+      }
+      @font-face {
+        font-family: Nav;
+        src: url(Dragrace.ttf);
+      }
+      @font-face {
+        font-family: blight;
+        src: url(klavika-light.otf);
+      }
+      @keyframes top {
+        0% {
+          transform: translateY(-1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes left {
+        0% {
+          transform: translateX(-1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes bottom {
+        0% {
+          transform: translateY(1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes right {
+        0% {
+          transform: translateX(1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #222;
+        padding: 0.5rem 1rem;
+        margin: 0em;
+        height: 4em;
+        /* animation: top 1s ease-out both; */
+      }
+
+      .logo {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        padding: 0;
+      }
+
+      .nav-links li a {
+        color: #f2f2f2;
+        text-decoration: none;
+        padding: 0.5rem 1.75rem;
+        font-family: body;
+        font-size: 2rem;
+      }
+
+      .nav-links li a:hover {
+        color: #f2f2f2;
+        background-color: #ff0000;
+        border-radius: 0.2em;
+      }
+
+      .login {
+        background-color: #ff0000;
+        color: #fff;
+        border: none;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        border-radius: 25em;
+        font-family: body3;
+        font-size: 1.25rem;
+      }
+
+      .login:hover {
+        background-color: #cc0000;
+      }
+      .sidebar {
+        background-color: #0a0a0a;
+        width: 18rem;
+        height: 49.7rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        /* animation: left 1.5s ease-in-out both; */
+      }
+      .section1 {
+        height: 20rem;
+        width: 100%;
+        background-color: #f2f2f2;
+        border-radius: 0rem 2rem 0rem 2rem;
+      }
+      .section1 > h2 {
+        text-align: center;
+        margin-top: 2.5rem;
+        font-family: body;
+      }
+      .section1 > input {
+        height: 2rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
+        width: 13.6rem;
+      }
+      .section1 > #red {
+        background-color: #ff0000;
+        border: none;
+        color: white;
+        font-family: blight;
+        font-weight: 400;
+        font-size: 1.1rem;
+      }
+      .section2 {
+        margin-top: 2rem;
+        height: 24rem;
+        width: 100%;
+        background-color: #f2f2f2;
+        border-radius: 0rem 2rem 0rem 2rem;
+      }
+      .section2 > input {
+        height: 2rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
+        width: 13.6rem;
+      }
+      /* .productpage {
+        height: 42.2rem;
+        width: 71rem;
+        background-color: #e2e2e2;
+        position: absolute;
+        top: 6.5rem;
+        left: 22.7rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: 0rem 2rem 0rem 2rem;
+        padding: 2rem;
+        animation: bottom 2s ease-in-out both;
+      }
+      .sidead {
+        height: 46.2rem;
+        width: 18.5rem;
+        background-color: rgba(126, 123, 123, 0);
+        position: absolute;
+        z-index: 1;
+        top: 6.5rem;
+        left: 99.2rem;
+        /* animation: right 2s ease-in-out both; */
+      .sidead > img {
+        max-width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 0rem 2rem 0rem 2rem;
+      }
+      .product {
+        height: 20rem;
+        width: 16.6rem;
+        background-color: #fff;
+        margin-right: 1rem;
+        margin-bottom: 0.8rem;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+        /* animation: bottom 2s ease-in-out both; */
+      }
+      #left {
+        margin-left: 0.5rem;
+      }
+      .product:hover {
+        cursor: pointer;
+        transform: translateY(-8px);
+        box-shadow: 0px 0px 5px #5e5d5d;
+      }
+      .product > p {
+        font-size: 1.2rem;
+        font-family: body;
+        margin-left: 2rem;
+      }
+      .product > div > img {
+        height: auto;
+        width: 100%;
+      }
+      .section2 > h2 {
+        text-align: center;
+        margin-top: 2.5rem;
+        font-family: body;
+      }
+      .section2 > #src {
+        height: 2rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
+        width: 13.6rem;
+      }
+      .section2 > ul {
+        margin-top: 1rem;
+        margin-left: 2rem;
+        list-style: none;
+      }
+      .section2 > ul > li {
+        font-family: blight;
+        font-size: 1.2rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+      }
+      #red {
+        background-color: #ff0000;
+        border: none;
+        color: white;
+        font-family: blight;
+        font-weight: 400;
+        font-size: 1.1rem;
+        height: 2rem;
+        margin-top: 0.5rem;
+        margin-left: 2rem;
+        width: 13.6rem;
+      }
+      #red:hover {
+        cursor: pointer;
+        background-color: #cc0000;
+      }
+      #tall {
+        height: 5rem;
+      }
+      #bgtxt {
+        margin-left: 2rem;
+        margin-top: 0.9rem;
+        font-family: body;
+      }
+      /* #Range {
+        height: 2rem;
+        margin-top: 1rem;
+        width: 5rem;
+      }
+      .section2 > label {
+        margin-left: 2rem;
+        font-family: body;
+      }
+      .pagination {
+        position: absolute;
+        z-index: 3;
+        top: 50.7rem;
+        left: 50rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.75rem;
+        background-color: #333;
+        border-radius: 1rem;
+        font-family: body;
+        animation: bottom 2.5s ease-in-out both;
+      }
+
+      .pagination a {
+        padding: 8px 16px;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .pagination a:hover {
+        background-color: #ff0000;
+      }
+      .pagination a:active {
+        background-color: #ff0000;
+      }
+      .pagination a::before {
+        background-color: #ff0000;
+      }
+      .pager {
+        background-color: #ff0000;
+      } */
+      .main-page {
+        height: 40.2rem;
+        width: 87rem;
+        background-color: #aaaaaa;
+        position: absolute;
+        left: 22.5rem;
+        top: 6.5rem;
+        padding: 3rem 4rem 3rem 4rem;
+        border-radius: 0rem 2rem 0rem 2rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* animation: bottom 1s; */
+      }
+      .main-page > input {
+        height: 2rem;
+        border-radius: 1rem;
+        border: none;
+      }
+      .main-page > input::placeholder {
+        text-align: center;
+        font-family: body;
+        font-size: 1.2rem;
+      }
+      /* .blog {
+        background-color: #f2f2f2;
+        width: 100%;
+        height: 10rem;
+        margin-top: 1.5rem;
+        padding: 0.5rem;
+        transition: all 0.25s;
+        border-radius: 0rem 2rem 0rem 2rem;
+        animation: right 1.5s ease-in-out;
+      }
+      .blog:hover {
+        box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0);
+        cursor: pointer;
+      }
+      #first {
+        margin-top: 2rem;
+      }
+      .blog > h2 {
+        font-family: body;
+        margin-top: 1rem;
+        margin-left: 1rem;
+      }
+      .blog > p {
+        font-family: blight;
+        margin-top: 0.5rem;
+        margin-left: 1rem;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      } */
+      #red2 {
+        background-color: #ff0000;
+        border: none;
+        color: white;
+        font-family: blight;
+        font-weight: 400;
+        font-size: 1.1rem;
+        height: 2rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
+        width: 13.6rem;
+      }
+      #red2:hover {
+        background-color: #cc0000;
+        cursor: pointer;
+      }
+      .FAQBOX {
+        background-color: #f2f2f2;
+        height: 90%;
+        width: 46%;
+        padding: 2rem;
+        border-radius: 0rem 0rem 0rem 2rem;
+        overflow: auto;
+      }
+      .FAQBOX > h2 {
+        font-family: body;
+      }
+      .FAQBOX > P {
+        font-family: blight;
+      }
+      ::-webkit-scrollbar {
+        width: 20px;
+        border: none;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: black;
+        border: none;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: red;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        border: none;
+      }
+      .Supportform {
+        background-color: #f2f2f2;
+        height: 90%;
+        width: 42%;
+        padding: 2rem;
+        border-radius: 0rem 2rem 0rem 2rem;
+        overflow: auto;
+        margin-left: 2rem;
+      }
+      .Supportform > H2 {
+        font-family: body;
+      }
+      .Supportform > p {
+        font-family: blight;
+      }
+      .formb {
+        height: 85%;
+        width: 94%;
+        margin-top: 1rem;
+        background-color: #c4c4c4;
+        padding: 1rem;
+        border-radius: 0rem 2rem 0rem 2rem;
+      }
+      .formb > form > label {
+        font-family: body;
+      }
+      .formb > form > input {
+        font-family: blight;
+        padding: 0.5rem 0.5rem;
+        height: 1rem;
+        width: 50%;
+        margin-bottom: 1rem;
+      }
+      .formb > form > input::placeholder {
+        font-family: blight;
+        padding: 0rem 0.25rem;
+      }
+      .formb > form > select {
+        font-family: body;
+        padding: 0.5rem 0.5rem;
+        height: 2.5rem;
+        width: 54%;
+        margin-bottom: 1rem;
+      }
+      .formb > form > select > option {
+        font-family: blight;
+        font-size: 1rem;
+      }
+      .formb > form > #txt {
+        width: 95%;
+        height: 5rem;
+      }
+      #btx {
+        width: 47%;
+        height: 3rem;
+        margin-top: -2rem;
+        font-family: body;
+        color: white;
+        background-color: #ff0000;
+        border: none;
+        font-size: 1rem;
+        border-radius: 0rem 1rem 0rem 1rem;
+      }
+      #btx:hover {
+        background-color: #cc0000;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="3Artboard 1.png" class="logo"
+        ><img src="3Artboard 1.png" alt="logo"
+      /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products1.html">Products</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <a href="login.html"><button class="login">Login</button></a>
+    </nav>
+    <div class="sidebar">
+      <div class="section1">
+        <h2>SIGN IN</h2>
+        <input type="text" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <a href="login.html"><input type="button" value="login" id="red" /></a>
+        <a href="newacc.html"
+          ><input type="button" value="create a new account" id="red"
+        /></a>
+      </div>
+      <div class="section2">
+        <h2>REACH US</h2>
+        <a href="https://wa.me/+923260378790" target="_blank"
+          ><input
+            type="button"
+            value="Whatsapp"
+            id="red2"
+            style="margin-top: 1.5rem"
+        /></a>
+        <a
+          href="https://twitter.com/Bloodygaming?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+          target="_blank"
+        >
+          <input type="button" value="X/Twitter" id="red2"
+        /></a>
+        <a href="https://www.facebook.com/bloodyusa/" target="_blank">
+          <input type="button" value="Facebook" id="red2"
+        /></a>
+        <a href="mailto:s.mahadhussain.aptech@gmail.com" target="_blank">
+          <input type="button" value="Email" id="red2"
+        /></a>
+        <a href="tel:+923230101879" target="_blank">
+          <input type="button" value="Telephone" id="red2"
+        /></a>
+      </div>
+    </div>
+    <div class="main-page">
+      <div class="FAQBOX">
+        <h2>FAQ</h2>
+        <hr />
+        <p>
+          <br /><b>1. What products do you offer?</b><br />
+          We offer a wide range of PC peripherals including keyboards, mice,
+          headphones, and more, designed to enhance your computing and gaming
+          experience.
+          <br /><br /><b>2. What is the warranty period for your products?</b
+          ><br />
+          All our products come with a comprehensive 1-year warranty, ensuring
+          that you can purchase with confidence and peace of mind.
+          <br /><br /><b>3. What is the return period for products?</b><br />
+          We offer a 7-day return period, allowing you to return products that
+          do not meet your expectations or requirements. We strive to ensure
+          your complete satisfaction with every purchase.
+          <br /><br /><b>4. What is the expected delivery time for orders?</b
+          ><br />
+          Our delivery process is designed to be swift and efficient. In most
+          cases, orders are delivered within 24 hours of purchase, ensuring that
+          you receive your products in a timely manner.
+          <br /><br /><b>5. Do you offer international shipping?</b><br />
+          At this time, we primarily focus on domestic shipping within Pakistan.
+          However, we are continually evaluating options for international
+          shipping to better serve our global customer base.
+          <br /><br /><b
+            >6. Are your products compatible with all operating systems?</b
+          ><br />
+          Our products are designed to be compatible with a wide range of
+          operating systems, including Windows, macOS, and Linux. Compatibility
+          details are provided in the product descriptions for your convenience.
+          <br /><br /><b
+            >7. Do you offer customization options for keyboards and mice?</b
+          ><br />
+          We are proud to offer a selection of customizable keyboards and mice.
+          Please refer to the product descriptions for details on available
+          customization options and compatibility.
+          <br /><br /><b
+            >8. How can I contact customer support for assistance?</b
+          ><br />
+          Our dedicated customer support team is readily available to assist you
+          with any inquiries or concerns. You can reach us via our support page,
+          and we will be happy to help you.
+          <br /><br /><b
+            >9. Are your products designed for gaming or general use?</b
+          ><br />
+          Our product lineup caters to a diverse audience, encompassing both
+          gaming and general computing needs. Whether you're a passionate gamer
+          or a professional user, we have products tailored to your
+          requirements.
+          <br /><br /><b
+            >10. Can I track my order once it has been dispatched?</b
+          ><br /><br />
+          Yes, once your order has been dispatched, you will receive tracking
+          information via email or through your account on our website, allowing
+          you to monitor the status of your delivery. We are continually
+          updating our FAQ section to address common queries and provide
+          comprehensive information to our valued customers. If you have
+          additional questions, please feel free to reach out to our customer
+          support team for further assistance.
+        </p>
+      </div>
+      <div class="Supportform">
+        <h2>Need more help ?</h2>
+        <hr />
+        <div class="formb">
+          <form>
+            <label for="Username">Username</label><br />
+            <input
+              type="text"
+              id="Username"
+              required
+              placeholder="Your online alias (DO NOT use real name)"
+            /><br />
+            <label for="Name">Real Name</label><br />
+            <input
+              type="text"
+              id="Name"
+              placeholder="Name so we can address you as such (optional)"
+            /><br />
+            <label for="Email">Email</label><br />
+            <input
+              type="Email"
+              id="Email"
+              required
+              placeholder="Your email address"
+            /><br />
+            <label for="selection2">What can we help you with ?</label><br />
+            <select id="selection2" name="selection2" required>
+              <br />
+              <option>Information/Miscellaneous questions</option>
+              <option>Bad Product</option>
+              <option>Warranty Claim</option>
+              <option>Delivery</option></select
+            ><br />
+            <label for="txt">Explain your problem</label><br />
+            <input type="text>" id="txt" placeholder="" required /><br /><br />
+            <input type="submit" id="btx" />
+            <input
+              type="reset"
+              value="undo"
+              id="btx"
+              style="margin-left: 1.4rem"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
